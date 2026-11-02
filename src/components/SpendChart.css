@@ -1,14 +1,14 @@
 .spend-chart {
-  --spend-accent: #b388ff;
-  --spend-accent-soft: #c9a8ff;
-  --spend-accent-end: #b388ff;
+  --spend-accent: #fafafa;
+  --spend-accent-soft: #e5e5e5;
+  --spend-accent-end: #fafafa;
   width: 100%;
 }
 
 .spend-chart-admin {
-  --spend-accent: #b388ff;
-  --spend-accent-soft: #a78bfa;
-  --spend-accent-end: #b388ff;
+  --spend-accent: #fafafa;
+  --spend-accent-soft: #d4d4d4;
+  --spend-accent-end: #fafafa;
 }
 
 .spend-chart-svg {
@@ -58,7 +58,7 @@
   fill: var(--spend-accent);
   stroke: #f3e8ff;
   stroke-width: 3;
-  filter: drop-shadow(0 0 10px rgba(179, 136, 255, 0.45));
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.45));
 }
 
 .spend-hit {
@@ -73,7 +73,7 @@
 }
 
 .spend-guide {
-  stroke: rgba(179, 136, 255, 0.35);
+  stroke: rgba(255, 255, 255, 0.35);
   stroke-width: 1.5;
   stroke-dasharray: 3 7;
   stroke-linecap: round;
@@ -86,7 +86,7 @@
   padding: 10px 12px;
   border-radius: 14px;
   background: rgba(24, 28, 34, 0.94);
-  border: 1px solid rgba(179, 136, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
   color: var(--text);
   backdrop-filter: blur(10px);
@@ -113,7 +113,7 @@
 }
 
 .spend-tip-split span:first-child {
-  color: #a78bfa !important;
+  color: #d4d4d4 !important;
   font-size: 11px;
   font-weight: 500;
 }
@@ -139,7 +139,7 @@
   min-height: 220px;
   padding: 24px 16px;
   position: relative;
-  background: radial-gradient(circle at 50% 30%, rgba(179, 136, 255, 0.05), transparent 70%);
+  background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.05), transparent 70%);
   border-radius: 14px;
 }
 
@@ -148,9 +148,9 @@
   width: 52px;
   height: 52px;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(179, 136, 255, 0.15), rgba(99, 102, 241, 0.12));
-  border: 1px solid rgba(179, 136, 255, 0.25);
-  box-shadow: 0 0 24px rgba(179, 136, 255, 0.12);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.12);
   margin-bottom: 6px;
   display: flex;
   align-items: center;
@@ -162,7 +162,7 @@
   width: 20px;
   height: 20px;
   border-radius: 6px;
-  border: 2px dashed rgba(179, 136, 255, 0.5);
+  border: 2px dashed rgba(255, 255, 255, 0.5);
   animation: orb-spin 10s linear infinite;
 }
 
