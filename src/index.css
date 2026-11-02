@@ -29,28 +29,28 @@
 }
 
 :root {
-  --bg: #1c1f24;
-  --bg-elevated: #23272e;
-  --surface: #282c34;
-  --surface-hover: #2f343e;
-  --surface-active: #353b46;
-  --border: rgba(255, 255, 255, 0.07);
-  --border-strong: rgba(255, 255, 255, 0.12);
-  --text: #e9ecef;
-  --text-secondary: #a0a6b0;
-  --text-muted: #6d7480;
-  --accent: #b388ff;
-  --accent-hover: #c9a8ff;
-  --accent-pressed: #9a6ef0;
-  --accent-soft: rgba(179, 136, 255, 0.12);
-  --accent-glow: rgba(179, 136, 255, 0.22);
+  --bg: #000000;
+  --bg-elevated: #0a0a0a;
+  --surface: #111111;
+  --surface-hover: #1a1a1a;
+  --surface-active: #262626;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --text: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #737373;
+  --accent: #fafafa;
+  --accent-hover: #ffffff;
+  --accent-pressed: #e5e5e5;
+  --accent-soft: rgba(255, 255, 255, 0.08);
+  --accent-glow: rgba(255, 255, 255, 0.06);
   --danger: #ef5c5c;
   --danger-soft: rgba(239, 92, 92, 0.12);
   --warning: #e8b339;
   --info: #5b9fd4;
   /* Provider tints — soft, readable on dark UI */
-  --prov-free: #b388ff;
-  --prov-free-soft: rgba(179, 136, 255, 0.14);
+  --prov-free: #fafafa;
+  --prov-free-soft: rgba(255, 255, 255, 0.14);
   --prov-openai: #7eb6f6;
   --prov-openai-soft: rgba(96, 165, 250, 0.14);
   --prov-anthropic: #e8a36a;
@@ -62,7 +62,7 @@
   --prov-deepseek: #6ec8ff;
   --prov-deepseek-soft: rgba(56, 189, 248, 0.14);
   --prov-zhipu: #b7a6ff;
-  --prov-zhipu-soft: rgba(167, 139, 250, 0.14);
+  --prov-zhipu-soft: rgba(255, 255, 255, 0.14);
   --prov-grok: #f0f3f7;
   --prov-grok-soft: rgba(255, 255, 255, 0.08);
   --prov-tencent: #388bfd;
@@ -71,13 +71,13 @@
   --prov-muse-soft: rgba(0, 130, 251, 0.16);
   --prov-jev: #f472b6;
   --prov-jev-soft: rgba(244, 114, 182, 0.15);
-  --radius-sm: 8px;
-  --radius: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
   --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.45);
-  --font: "Geologica", "Outfit", system-ui, -apple-system, sans-serif;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --nav-width: 228px;
   --header-h: 64px;
@@ -158,20 +158,7 @@ body {
   box-sizing: border-box;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  background:
-    radial-gradient(1100px 640px at 8% -14%, rgba(179, 136, 255, 0.13), transparent 56%),
-    radial-gradient(900px 520px at 96% -6%, rgba(167, 139, 250, 0.11), transparent 52%),
-    radial-gradient(760px 480px at 86% 22%, rgba(251, 146, 60, 0.08), transparent 55%),
-    radial-gradient(700px 420px at 36% 4%, rgba(234, 179, 8, 0.06), transparent 52%),
-    radial-gradient(640px 380px at 50% 100%, rgba(179, 136, 255, 0.04), transparent 55%),
-    linear-gradient(180deg, #20252c 0%, var(--bg) 38%);
-}
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1; background: #000000; }
 
 a {
   color: inherit;
@@ -278,7 +265,7 @@ img[src='/brand/mark.png'] {
   gap: 8px;
   height: 40px;
   padding: 0 16px;
-  border-radius: 999px;
+  border-radius: 6px;
   font-weight: 650;
   font-size: 14px;
   letter-spacing: -0.01em;
@@ -294,28 +281,16 @@ img[src='/brand/mark.png'] {
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: none;
 }
 
 .btn:active {
   transform: translateY(0) scale(0.98);
 }
 
-.btn-primary {
-  border: 0;
-  color: #071018;
-  background: linear-gradient(180deg, #dcc4ff 0%, #b388ff 55%, #9a6ef0 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.45),
-    0 8px 22px rgba(179, 136, 255, 0.32);
-}
+.btn-primary { border: 1px solid #fafafa; color: #000000; background: #fafafa; box-shadow: none; }
 
-.btn-primary:hover {
-  background: linear-gradient(180deg, #ead9ff 0%, #c9a8ff 55%, #a78bfa 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.55),
-    0 12px 28px rgba(179, 136, 255, 0.4);
-}
+.btn-primary:hover { background: #ffffff; border-color: #ffffff; box-shadow: none; }
 
 .btn-primary:active {
   background: var(--accent-pressed);
@@ -328,12 +303,7 @@ img[src='/brand/mark.png'] {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(143, 212, 255, 0.45);
-  color: #fff;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.4); color: #fff; box-shadow: none; }
 
 .btn-ghost {
   background: transparent;
@@ -491,7 +461,7 @@ img[src='/brand/mark.png'] {
   gap: 6px;
   height: 24px;
   padding: 0 10px;
-  border-radius: 999px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: 550;
   letter-spacing: 0.02em;
@@ -559,7 +529,7 @@ img[src='/brand/mark.png'] {
 
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 999px;
+  border-radius: 6px;
   border: 2px solid transparent;
   background-clip: padding-box;
 }
