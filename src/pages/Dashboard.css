@@ -128,16 +128,16 @@
 }
 
 .ov-btn-tg {
-  color: #b388ff;
-  border-color: rgba(179, 136, 255, 0.25);
-  background: rgba(179, 136, 255, 0.06);
+  color: #fafafa;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
   text-decoration: none;
 }
 
 .ov-btn-tg:hover {
-  color: #c9a8ff;
-  border-color: rgba(179, 136, 255, 0.45);
-  background: rgba(179, 136, 255, 0.12);
+  color: #e5e5e5;
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .ov-btn-tg.is-verified {
@@ -153,14 +153,14 @@
 }
 
 .ov-btn-redeem {
-  border-color: rgba(167, 139, 250, 0.3);
-  background: rgba(167, 139, 250, 0.08);
-  color: #c9a8ff;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e5e5;
 }
 
 .ov-btn-redeem:hover {
-  background: rgba(167, 139, 250, 0.16);
-  border-color: rgba(167, 139, 250, 0.45);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.45);
   color: #bfdbfe;
 }
 
@@ -173,7 +173,7 @@
   border-radius: 10px;
   font-size: 13px;
   font-weight: 700;
-  box-shadow: 0 0 20px rgba(179, 136, 255, 0.25);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
 }
 
 /* ==========================================================================
@@ -185,7 +185,7 @@
   border-radius: 16px;
   padding: 18px 20px;
   background: linear-gradient(135deg, rgba(20, 26, 36, 0.95), rgba(14, 18, 24, 0.98));
-  border: 1px solid rgba(179, 136, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -219,9 +219,9 @@
   font-weight: 700;
   padding: 2px 8px;
   border-radius: 999px;
-  background: rgba(179, 136, 255, 0.14);
-  border: 1px solid rgba(179, 136, 255, 0.3);
-  color: #b388ff;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fafafa;
 }
 
 .ov-onboard-progress-ring-wrap {
@@ -235,7 +235,7 @@
 .ov-onboard-strip-fill {
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #b388ff, #818cf8);
+  background: linear-gradient(90deg, #fafafa, #a1a1aa);
   transition: width 0.3s ease;
 }
 
@@ -261,7 +261,7 @@
 
 .ov-onboard-step-card:hover {
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(179, 136, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-1px);
 }
 
@@ -372,7 +372,7 @@
 }
 
 .ov-tag-accent {
-  color: #b388ff;
+  color: #fafafa;
 }
 
 /* --------------------------------------------------------------------------
@@ -380,7 +380,7 @@
    -------------------------------------------------------------------------- */
 .ov-cockpit-card {
   background: linear-gradient(155deg, #151a24 0%, #101319 100%);
-  border-color: rgba(179, 136, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.24);
   padding: 22px;
 }
 
@@ -391,7 +391,7 @@
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(179, 136, 255, 0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 70%);
   pointer-events: none;
 }
 
@@ -410,9 +410,9 @@
 .ov-tag-live {
   font-size: 10px;
   font-weight: 700;
-  color: #b388ff;
-  background: rgba(179, 136, 255, 0.12);
-  border: 1px solid rgba(179, 136, 255, 0.25);
+  color: #fafafa;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 2px 6px;
   border-radius: 5px;
   text-transform: uppercase;
@@ -432,7 +432,7 @@
   font-variant-numeric: tabular-nums;
   line-height: 1.1;
   color: #ffffff;
-  text-shadow: 0 0 32px rgba(179, 136, 255, 0.22);
+  text-shadow: 0 0 32px rgba(255, 255, 255, 0.22);
 }
 
 .ov-btn-topup-accent {
@@ -482,7 +482,7 @@
 .ov-cockpit-link {
   font-size: 12px;
   font-weight: 600;
-  color: #b388ff;
+  color: #fafafa;
   text-decoration: none;
 }
 
@@ -539,7 +539,7 @@
 .ov-cockpit-fill {
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #b388ff, #a78bfa);
+  background: linear-gradient(90deg, #fafafa, #d4d4d4);
   transition: width 0.3s ease;
 }
 
@@ -608,9 +608,9 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: rgba(179, 136, 255, 0.1);
-  border: 1px solid rgba(179, 136, 255, 0.22);
-  color: #b388ff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fafafa;
   flex-shrink: 0;
 }
 
@@ -698,8 +698,8 @@
 
 .ov-terminal-tab.is-active {
   background: rgba(255, 255, 255, 0.1) !important;
-  color: #b388ff !important;
-  border-color: rgba(179, 136, 255, 0.25) !important;
+  color: #fafafa !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -753,18 +753,18 @@
 .ov-telemetry-link-btn {
   font-size: 12px;
   font-weight: 600;
-  color: #b388ff;
+  color: #fafafa;
   text-decoration: none;
   padding: 4px 10px;
   border-radius: 8px;
-  background: rgba(179, 136, 255, 0.06);
-  border: 1px solid rgba(179, 136, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   transition: all 0.15s ease;
 }
 
 .ov-telemetry-link-btn:hover {
-  background: rgba(179, 136, 255, 0.14);
-  color: #c9a8ff;
+  background: rgba(255, 255, 255, 0.14);
+  color: #e5e5e5;
 }
 
 .ov-telemetry-stat-pills {
@@ -836,9 +836,9 @@
   width: 30px;
   height: 30px;
   border-radius: 8px;
-  background: rgba(179, 136, 255, 0.1);
-  border: 1px solid rgba(179, 136, 255, 0.22);
-  color: #b388ff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fafafa;
   flex-shrink: 0;
 }
 
@@ -947,7 +947,7 @@
   font-family: var(--mono, monospace);
   font-size: 12px;
   font-weight: 750;
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .ov-recent-time {
