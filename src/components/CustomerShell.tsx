@@ -2,6 +2,11 @@ import { useEffect, useMemo, useState } from 'react'
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
 import { CustomerProvider } from '../auth/CustomerContext'
 import { userApi, type CustomerUser } from '../auth/userApi'
+import {
+  firebaseSignOut,
+  isFirebaseConfigured,
+  onFirebaseUserChange,
+} from '../auth/firebase'
 import { Layout } from './Layout'
 import { PublicChrome } from './PublicChrome'
 
@@ -28,23 +33,41 @@ export function CustomerShell({
 
   useEffect(() => {
     let cancelled = false
+    let firebaseUnsub: (() => void) | undefined
     userApi
       .me()
       .then((data) => {
         if (!cancelled) setUser(data.user)
       })
       .catch(() => {
-        if (!cancelled) setUser(null)
+        // No gateway backend on Vercel yet: fall back to Firebase auth.
+        if (isFirebaseConfigured) {
+          firebaseUnsub = onFirebaseUserChange((fbUser) => {
+            if (!cancelled) setUser(fbUser)
+          })
+        } else if (!cancelled) {
+          setUser(null)
+        }
       })
     return () => {
       cancelled = true
+      firebaseUnsub?.()
     }
   }, [])
 
   const actions: Actions = useMemo(
     () => ({
       logout: async () => {
-        await userApi.logout()
+        try {
+          await firebaseSignOut()
+        } catch {
+          // Firebase sign-out is best effort here.
+        }
+        try {
+          await userApi.logout()
+        } catch {
+          // Local state still clears below.
+        }
         setUser(null)
         window.location.href = '/'
       },
@@ -57,7 +80,8 @@ export function CustomerShell({
           const next = await userApi.me()
           setUser(next.user)
         } catch {
-          setUser(null)
+          // Keep a Firebase session alive when the backend is absent.
+          if (!user?.authMethod || user.authMethod !== 'firebase') setUser(null)
         }
       },
     }),
