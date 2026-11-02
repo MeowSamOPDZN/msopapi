@@ -4,7 +4,7 @@ import { AdminPageHeader, EmptyState } from '../AdminShared'
 import { ModelUsagePanel } from './ModelUsagePanel'
 import './AdminPages.css'
 
-const CHART_UP = '#b388ff'
+const CHART_UP = '#fafafa'
 const CHART_DOWN = '#E87979'
 const CHART_FLAT = '#8BA3B7'
 const CHART_PADDING = { top: 18, right: 18, bottom: 28, left: 12 } as const
@@ -219,7 +219,7 @@ function toneColor(tone: 'up' | 'down' | 'flat') {
 }
 
 function toneFill(tone: 'up' | 'down' | 'flat') {
-  if (tone === 'up') return 'rgba(179, 136, 255, 0.26)'
+  if (tone === 'up') return 'rgba(255, 255, 255, 0.26)'
   if (tone === 'down') return 'rgba(232, 121, 121, 0.2)'
   return 'rgba(139, 163, 183, 0.2)'
 }
