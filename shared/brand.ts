@@ -18,12 +18,12 @@ function strip(url: string) {
 }
 
 export function siteName() {
-  return env('SITE_NAME') || 'Gateway'
+  return env('SITE_NAME') || 'MsopAPI'
 }
 
 export function brandSlug() {
   const slug = siteName().toLowerCase().replace(/[^a-z0-9]+/g, '')
-  return slug || 'gateway'
+  return slug || 'msopapi'
 }
 
 export function siteUrl() {
