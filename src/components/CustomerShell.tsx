@@ -4,6 +4,7 @@ import { CustomerProvider } from '../auth/CustomerContext'
 import { userApi, type CustomerUser } from '../auth/userApi'
 import {
   firebaseSignOut,
+  getFirebaseAuth,
   isFirebaseConfigured,
   onFirebaseUserChange,
 } from '../auth/firebase'
@@ -81,11 +82,14 @@ export function CustomerShell({
           setUser(next.user ?? null)
         } catch {
           // Keep a Firebase session alive when the backend is absent.
-          if (!user?.authMethod || user.authMethod !== 'firebase') setUser(null)
+          // Check the live Firebase user, not a stale closure, or the
+          // dashboard refresh logs a Firebase user out in a loop.
+          const fbUser = getFirebaseAuth()?.currentUser
+          if (!fbUser && (!user || user.authMethod !== 'firebase')) setUser(null)
         }
       },
     }),
-    [],
+    [user],
   )
 
   const providerValue = useMemo(
