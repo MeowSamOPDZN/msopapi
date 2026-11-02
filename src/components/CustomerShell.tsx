@@ -37,7 +37,7 @@ export function CustomerShell({
     userApi
       .me()
       .then((data) => {
-        if (!cancelled) setUser(data.user)
+        if (!cancelled) setUser(data.user ?? null)
       })
       .catch(() => {
         // No gateway backend on Vercel yet: fall back to Firebase auth.
@@ -78,7 +78,7 @@ export function CustomerShell({
         }
         try {
           const next = await userApi.me()
-          setUser(next.user)
+          setUser(next.user ?? null)
         } catch {
           // Keep a Firebase session alive when the backend is absent.
           if (!user?.authMethod || user.authMethod !== 'firebase') setUser(null)
@@ -94,7 +94,7 @@ export function CustomerShell({
   )
 
   if (user === undefined) {
-    return <div className="admin-loading" style={{ minHeight: '40vh' }} />
+    return <div className="admin-loading" style={{ minHeight: '40vh' }}>Loading…</div>
   }
 
   const path = location.pathname.replace(/\/$/, '') || '/'
