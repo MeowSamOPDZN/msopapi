@@ -1187,3 +1187,32 @@
     border-top: 1px dashed rgba(255, 255, 255, 0.06);
   }
 }
+
+/* vercel dashboard overview, from the screenshot Sam sent */
+.dashboard { background: #000000; }
+.ov-header { background: transparent; border: none; box-shadow: none; padding: 0 0 16px; }
+.ov-title { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; color: #ededed; }
+.ov-subtitle { font-size: 13px; color: #888888; }
+.ov-studio-deck { display: grid; grid-template-columns: 380px 1fr; gap: 16px; align-items: start; }
+.ov-card { background: #0a0a0a; border: 1px solid #1f1f1f; border-radius: 8px; box-shadow: none; }
+.ov-card:hover { box-shadow: none; border-color: #262626; }
+.ov-cockpit-glow { display: none; }
+.ov-cockpit-balance-val { color: #ededed; }
+.ov-cockpit-sub { color: #888888; font-size: 13px; }
+.ov-cockpit-divider { border-color: #1f1f1f; }
+.ov-micro-tag { color: #888888; font-size: 12px; }
+.ov-terminal-card { background: #0a0a0a; }
+.ov-terminal-heading { color: #ededed; font-size: 14px; }
+.ov-terminal-sub { color: #888888; font-size: 13px; }
+.ov-codebox-topbar { background: #000000; border-bottom: 1px solid #1f1f1f; }
+.ov-codebox-pre { background: #000000; }
+.ov-recent-item { border-bottom: 1px solid #1f1f1f; padding: 12px 0; }
+.ov-recent-item:last-child { border-bottom: none; }
+.ov-recent-model { color: #ededed; }
+.ov-recent-detail { color: #888888; }
+.ov-onboard-strip { background: #0a0a0a; border: 1px solid #1f1f1f; border-radius: 8px; box-shadow: none; }
+.ov-onboard-step-card { background: #000000; border: 1px solid #1f1f1f; border-radius: 8px; box-shadow: none; }
+.ov-telemetry-stat-pill { background: #000000; border: 1px solid #1f1f1f; border-radius: 8px; }
+@media (max-width: 980px) {
+  .ov-studio-deck { grid-template-columns: 1fr; }
+}
