@@ -18,9 +18,9 @@
   pointer-events: none;
   overflow: hidden;
   background:
-    radial-gradient(1200px 700px at 15% -10%, rgba(179, 136, 255, 0.2), transparent 60%),
-    radial-gradient(900px 600px at 85% 10%, rgba(99, 102, 241, 0.16), transparent 55%),
-    radial-gradient(800px 500px at 50% 60%, rgba(179, 136, 255, 0.08), transparent 65%),
+    radial-gradient(1200px 700px at 15% -10%, rgba(255, 255, 255, 0.2), transparent 60%),
+    radial-gradient(900px 600px at 85% 10%, rgba(255, 255, 255, 0.16), transparent 55%),
+    radial-gradient(800px 500px at 50% 60%, rgba(255, 255, 255, 0.08), transparent 65%),
     linear-gradient(180deg, #0d111a 0%, #080b11 50%, #05070a 100%);
 }
 
@@ -36,7 +36,7 @@
   height: 480px;
   top: -80px;
   left: -80px;
-  background: rgba(179, 136, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3);
   animation: lp-float 14s ease-in-out infinite;
 }
 
@@ -45,7 +45,7 @@
   height: 420px;
   top: 10%;
   right: -80px;
-  background: rgba(129, 140, 248, 0.25);
+  background: rgba(255, 255, 255, 0.25);
   animation: lp-float 18s ease-in-out infinite reverse;
 }
 
@@ -159,7 +159,7 @@
 .lp-social-tg:hover {
   border-color: rgba(56, 178, 234, 0.45);
   background: rgba(56, 178, 234, 0.12);
-  color: #c9a8ff;
+  color: #e5e5e5;
 }
 
 .lp-social-x:hover {
@@ -180,18 +180,18 @@
 .lp-hero-cta .btn-primary {
   border: 0;
   color: #071018;
-  background: linear-gradient(180deg, #dcc4ff 0%, #b388ff 55%, #9a6ef0 100%);
+  background: linear-gradient(180deg, #fafafa 0%, #fafafa 55%, #d4d4d4 100%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.45),
-    0 8px 22px rgba(179, 136, 255, 0.32);
+    0 8px 22px rgba(255, 255, 255, 0.32);
 }
 
 .lp-header-actions .btn-primary:hover,
 .lp-hero-cta .btn-primary:hover {
-  background: linear-gradient(180deg, #ead9ff 0%, #c9a8ff 55%, #a78bfa 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #e5e5e5 55%, #d4d4d4 100%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.55),
-    0 12px 28px rgba(179, 136, 255, 0.4);
+    0 12px 28px rgba(255, 255, 255, 0.4);
 }
 
 .lp-hero-cta .btn-secondary {
@@ -203,7 +203,7 @@
 
 .lp-hero-cta .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(143, 212, 255, 0.45);
+  border-color: rgba(255, 255, 255, 0.45);
   color: #fff;
 }
 
@@ -246,8 +246,8 @@
   inset: -10% 20% auto -10%;
   height: 600px;
   background:
-    radial-gradient(circle at 35% 35%, rgba(179, 136, 255, 0.24), transparent 60%),
-    radial-gradient(circle at 75% 55%, rgba(99, 102, 241, 0.16), transparent 55%);
+    radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.24), transparent 60%),
+    radial-gradient(circle at 75% 55%, rgba(255, 255, 255, 0.16), transparent 55%);
   filter: blur(40px);
   pointer-events: none;
 }
@@ -262,7 +262,7 @@
 }
 
 .lp-hero-gradient-text {
-  background: linear-gradient(120deg, #b388ff 20%, #818cf8 100%);
+  background: linear-gradient(120deg, #fafafa 20%, #a1a1aa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -292,8 +292,8 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #b388ff;
-  box-shadow: 0 0 8px #b388ff;
+  background: #fafafa;
+  box-shadow: 0 0 8px #fafafa;
 }
 
 .lp-metric-label {
@@ -305,7 +305,7 @@
 .lp-metric-num {
   font-size: 16px;
   font-weight: 800;
-  color: #b388ff;
+  color: #fafafa;
   font-variant-numeric: tabular-nums;
 }
 
@@ -322,7 +322,7 @@
 }
 
 .lp-hero-btn-main {
-  box-shadow: 0 4px 20px rgba(179, 136, 255, 0.35);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.35);
 }
 
 /* ==========================================================================
@@ -333,10 +333,10 @@
   overflow: visible;
   border-radius: 20px;
   background: linear-gradient(155deg, rgba(20, 26, 38, 0.95), rgba(12, 16, 24, 0.98));
-  border: 1px solid rgba(179, 136, 255, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   box-shadow:
     0 24px 64px rgba(0, 0, 0, 0.6),
-    0 0 40px rgba(179, 136, 255, 0.08),
+    0 0 40px rgba(255, 255, 255, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
@@ -401,9 +401,9 @@
 }
 
 .lp-console-tab.is-active {
-  color: #b388ff;
-  background: rgba(179, 136, 255, 0.12);
-  border-color: rgba(179, 136, 255, 0.3);
+  color: #fafafa;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .lp-console-body {
@@ -485,7 +485,7 @@
 
 .lp-model-btn:hover {
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(179, 136, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .lp-model-btn-lead {
@@ -513,8 +513,8 @@
 .lp-model-price-badge {
   font-size: 11px;
   font-weight: 700;
-  color: #b388ff;
-  background: rgba(179, 136, 255, 0.12);
+  color: #fafafa;
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 5px;
   padding: 2px 7px;
   font-variant-numeric: tabular-nums;
@@ -537,8 +537,8 @@
   max-height: min(280px, 44vh);
   border-radius: 14px;
   background: #0c1017 !important;
-  border: 1px solid rgba(179, 136, 255, 0.45);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.95), 0 0 24px rgba(179, 136, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.95), 0 0 24px rgba(255, 255, 255, 0.18);
   z-index: 300 !important;
   overflow: hidden;
   display: flex;
@@ -560,7 +560,7 @@
 
 .lp-model-count {
   font-size: 10.5px;
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .lp-model-search-wrap {
@@ -584,7 +584,7 @@
 }
 
 .lp-model-search-input:focus {
-  border-color: rgba(179, 136, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
   background: rgba(0, 0, 0, 0.4);
 }
 
@@ -609,12 +609,12 @@
 }
 
 .lp-model-list::-webkit-scrollbar-thumb {
-  background: rgba(179, 136, 255, 0.35);
+  background: rgba(255, 255, 255, 0.35);
   border-radius: 999px;
 }
 
 .lp-model-list::-webkit-scrollbar-thumb:hover {
-  background: rgba(179, 136, 255, 0.6);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .lp-model-item {
@@ -639,8 +639,8 @@
 }
 
 .lp-model-item.is-active {
-  background: rgba(179, 136, 255, 0.14);
-  border-color: rgba(179, 136, 255, 0.35);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .lp-model-item-lead {
@@ -708,7 +708,7 @@
 
 .lp-deck-vol-label strong {
   font-size: 14px;
-  color: #b388ff;
+  color: #fafafa;
   font-variant-numeric: tabular-nums;
 }
 
@@ -730,8 +730,8 @@
   height: 18px;
   border-radius: 50%;
   background: #ffffff;
-  border: 2px solid #b388ff;
-  box-shadow: 0 0 10px rgba(179, 136, 255, 0.8);
+  border: 2px solid #fafafa;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   cursor: grab;
 }
 
@@ -761,9 +761,9 @@
 }
 
 .lp-deck-pill.is-active {
-  color: #b388ff;
-  background: rgba(179, 136, 255, 0.15);
-  border-color: rgba(179, 136, 255, 0.35);
+  color: #fafafa;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 /* Duel comparison cards */
@@ -790,9 +790,9 @@
 }
 
 .lp-duel-card.lp-duel-ours {
-  background: rgba(179, 136, 255, 0.06);
-  border-color: rgba(179, 136, 255, 0.3);
-  box-shadow: 0 0 20px rgba(179, 136, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
 }
 
 .lp-duel-header {
@@ -806,7 +806,7 @@
 }
 
 .lp-duel-tag.is-ours {
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .lp-savings-badge {
@@ -866,7 +866,7 @@
 }
 
 .lp-duel-amount.is-ours strong {
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .lp-percent-badge {
@@ -962,7 +962,7 @@
 .lp-code-lang {
   font-size: 11.5px;
   font-family: var(--font-mono, monospace);
-  color: #b388ff;
+  color: #fafafa;
   font-weight: 650;
 }
 
@@ -1050,7 +1050,7 @@
 }
 
 .lp-deck-chip:hover {
-  border-color: rgba(179, 136, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.35);
   color: #f1f5f9;
 }
 
@@ -1164,7 +1164,7 @@
   justify-self: end;
   padding: 4px 8px;
   border-radius: 999px;
-  background: rgba(179, 136, 255, 0.14);
+  background: rgba(255, 255, 255, 0.14);
   color: var(--accent-hover);
   font-size: 12px;
   font-style: normal;
@@ -1271,9 +1271,9 @@
   gap: 8px;
   padding: 12px 16px;
   border-radius: 14px;
-  border: 1px solid rgba(179, 136, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background:
-    radial-gradient(180px 80px at 10% 0%, rgba(179, 136, 255, 0.22), transparent 70%),
+    radial-gradient(180px 80px at 10% 0%, rgba(255, 255, 255, 0.22), transparent 70%),
     rgba(0, 0, 0, 0.28);
 }
 
@@ -1299,8 +1299,8 @@
 .lp-hero-price-badge {
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(179, 136, 255, 0.12);
-  border: 1px solid rgba(179, 136, 255, 0.28);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   color: var(--accent-hover);
   font-size: 12px;
   font-weight: 650;
@@ -1323,13 +1323,13 @@
   content: "";
   position: absolute;
   inset: 12% -8% -8% 18%;
-  background: radial-gradient(circle at 70% 40%, rgba(179, 136, 255, 0.2), transparent 60%);
+  background: radial-gradient(circle at 70% 40%, rgba(255, 255, 255, 0.2), transparent 60%);
   filter: blur(24px);
   z-index: -1;
 }
 
 .lp-terminal {
-  border: 1px solid rgba(179, 136, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 18px;
   background:
     linear-gradient(165deg, rgba(42, 48, 58, 0.96), rgba(24, 28, 34, 0.98)),
@@ -1337,7 +1337,7 @@
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.03) inset,
     0 24px 64px rgba(0, 0, 0, 0.45),
-    0 0 48px rgba(179, 136, 255, 0.08);
+    0 0 48px rgba(255, 255, 255, 0.08);
   overflow: hidden;
 }
 
@@ -1389,7 +1389,7 @@
   color: #9aa3b0;
 }
 .lp-code-key {
-  color: #c9a8ff;
+  color: #e5e5e5;
 }
 .lp-code-body {
   color: #a8e6bf;
@@ -1400,8 +1400,8 @@
   justify-content: space-between;
   gap: 12px;
   padding: 12px 16px;
-  border-top: 1px solid rgba(179, 136, 255, 0.18);
-  background: linear-gradient(90deg, rgba(179, 136, 255, 0.1), rgba(167, 139, 250, 0.06));
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.06));
   color: var(--text-secondary);
   font-family: var(--mono);
   font-size: 11px;
@@ -1415,7 +1415,7 @@
 .lp-marquee {
   overflow: hidden;
   border-block: 1px solid rgba(255, 255, 255, 0.06);
-  background: linear-gradient(90deg, rgba(179, 136, 255, 0.06), rgba(0, 0, 0, 0.28), rgba(167, 139, 250, 0.06));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.28), rgba(255, 255, 255, 0.06));
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
@@ -1580,12 +1580,12 @@
 .lp-model-price-free:hover {
   box-shadow:
     0 14px 34px rgba(0, 0, 0, 0.3),
-    0 0 28px rgba(179, 136, 255, 0.14);
+    0 0 28px rgba(255, 255, 255, 0.14);
 }
 .lp-model-price-openai:hover {
   box-shadow:
     0 14px 34px rgba(0, 0, 0, 0.3),
-    0 0 28px rgba(167, 139, 250, 0.12);
+    0 0 28px rgba(255, 255, 255, 0.12);
 }
 .lp-model-price-anthropic:hover {
   box-shadow:
@@ -1605,12 +1605,12 @@
 .lp-model-price-deepseek:hover {
   box-shadow:
     0 14px 34px rgba(0, 0, 0, 0.3),
-    0 0 28px rgba(179, 136, 255, 0.12);
+    0 0 28px rgba(255, 255, 255, 0.12);
 }
 .lp-model-price-zhipu:hover {
   box-shadow:
     0 14px 34px rgba(0, 0, 0, 0.3),
-    0 0 28px rgba(167, 139, 250, 0.12);
+    0 0 28px rgba(255, 255, 255, 0.12);
 }
 .lp-model-price-xai:hover,
 .lp-model-price-grok:hover {
@@ -1625,11 +1625,11 @@
 
 .lp-model-price-free {
   border-left-color: var(--prov-free);
-  background: linear-gradient(90deg, rgba(179, 136, 255, 0.1), rgba(0, 0, 0, 0.18));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.18));
 }
 .lp-model-price-openai {
   border-left-color: var(--prov-openai);
-  background: linear-gradient(90deg, rgba(167, 139, 250, 0.08), rgba(0, 0, 0, 0.18));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.18));
 }
 .lp-model-price-anthropic {
   border-left-color: var(--prov-anthropic);
@@ -1645,11 +1645,11 @@
 }
 .lp-model-price-deepseek {
   border-left-color: var(--prov-deepseek);
-  background: linear-gradient(90deg, rgba(179, 136, 255, 0.1), rgba(0, 0, 0, 0.18));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.18));
 }
 .lp-model-price-zhipu {
   border-left-color: var(--prov-zhipu);
-  background: linear-gradient(90deg, rgba(167, 139, 250, 0.1), rgba(0, 0, 0, 0.18));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.18));
 }
 .lp-model-price-xai,
 .lp-model-price-grok {
@@ -1780,8 +1780,8 @@
     0 16px 32px color-mix(in srgb, var(--plan-tint) 22%, transparent);
 }
 
-.lp-plan-day1 { --plan-tint: #b388ff; }
-.lp-plan-day7 { --plan-tint: #a78bfa; }
+.lp-plan-day1 { --plan-tint: #fafafa; }
+.lp-plan-day7 { --plan-tint: #d4d4d4; }
 .lp-plan-day14 { --plan-tint: #f59e0b; }
 .lp-plan-day30 { --plan-tint: #34d399; }
 
@@ -1968,15 +1968,15 @@
 }
 
 .lp-provider-free {
-  border-color: rgba(179, 136, 255, 0.32);
+  border-color: rgba(255, 255, 255, 0.32);
   background:
-    radial-gradient(180px 120px at 0% 0%, rgba(179, 136, 255, 0.18), transparent 70%),
+    radial-gradient(180px 120px at 0% 0%, rgba(255, 255, 255, 0.18), transparent 70%),
     rgba(0, 0, 0, 0.18);
 }
 .lp-provider-openai {
   border-color: rgba(126, 182, 246, 0.32);
   background:
-    radial-gradient(180px 120px at 0% 0%, rgba(167, 139, 250, 0.18), transparent 70%),
+    radial-gradient(180px 120px at 0% 0%, rgba(255, 255, 255, 0.18), transparent 70%),
     rgba(0, 0, 0, 0.18);
 }
 .lp-provider-anthropic {
@@ -2000,13 +2000,13 @@
 .lp-provider-deepseek {
   border-color: rgba(110, 200, 255, 0.32);
   background:
-    radial-gradient(180px 120px at 0% 0%, rgba(179, 136, 255, 0.16), transparent 70%),
+    radial-gradient(180px 120px at 0% 0%, rgba(255, 255, 255, 0.16), transparent 70%),
     rgba(0, 0, 0, 0.18);
 }
 .lp-provider-zhipu {
   border-color: rgba(183, 166, 255, 0.32);
   background:
-    radial-gradient(180px 120px at 0% 0%, rgba(167, 139, 250, 0.16), transparent 70%),
+    radial-gradient(180px 120px at 0% 0%, rgba(255, 255, 255, 0.16), transparent 70%),
     rgba(0, 0, 0, 0.18);
 }
 .lp-provider-xai,
@@ -2066,12 +2066,12 @@
   justify-content: center;
   padding: 36px 28px;
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(179, 136, 255, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.32);
   background:
-    radial-gradient(420px 240px at 20% 0%, rgba(179, 136, 255, 0.24), transparent 65%),
-    radial-gradient(280px 180px at 100% 100%, rgba(167, 139, 250, 0.1), transparent 60%),
+    radial-gradient(420px 240px at 20% 0%, rgba(255, 255, 255, 0.24), transparent 65%),
+    radial-gradient(280px 180px at 100% 100%, rgba(255, 255, 255, 0.1), transparent 60%),
     rgba(0, 0, 0, 0.28);
-  box-shadow: 0 0 40px rgba(179, 136, 255, 0.08);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
 }
 
 .lp-price-label {
@@ -2200,7 +2200,7 @@
   border-radius: 999px;
   border: 1px solid rgba(29, 155, 240, 0.28);
   background: rgba(29, 155, 240, 0.08);
-  color: #c9a8ff;
+  color: #e5e5e5;
   font-size: 12.5px;
   font-weight: 600;
 }
@@ -2224,7 +2224,7 @@
 
 .lp-faq-item:hover,
 .lp-faq-item.is-open {
-  border-color: rgba(179, 136, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.35);
   background: rgba(0, 0, 0, 0.32);
 }
 
@@ -2280,10 +2280,10 @@
   padding: 56px 28px;
   text-align: center;
   border-radius: 24px;
-  border: 1px solid rgba(179, 136, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   background:
-    radial-gradient(520px 240px at 50% 0%, rgba(179, 136, 255, 0.22), transparent 65%),
-    radial-gradient(420px 220px at 90% 100%, rgba(167, 139, 250, 0.12), transparent 60%),
+    radial-gradient(520px 240px at 50% 0%, rgba(255, 255, 255, 0.22), transparent 65%),
+    radial-gradient(420px 220px at 90% 100%, rgba(255, 255, 255, 0.12), transparent 60%),
     rgba(0, 0, 0, 0.28);
 }
 
@@ -2336,7 +2336,7 @@
 .lp-footer-brand img {
   width: 24px;
   height: 24px;
-  filter: drop-shadow(0 2px 8px rgba(179, 136, 255, 0.35));
+  filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.35));
 }
 
 .lp-footer-tagline {
@@ -2353,8 +2353,8 @@
   gap: 8px;
   padding: 4px 12px;
   border-radius: 999px;
-  background: rgba(179, 136, 255, 0.08);
-  border: 1px solid rgba(179, 136, 255, 0.24);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   color: var(--accent);
   font-size: 12px;
   font-weight: 500;
@@ -2694,3 +2694,29 @@
     border-radius: 14px;
   }
 }
+
+/* vercel style for msopapi */
+.lp { background: #000000; }
+.lp-atmosphere { background: #000000; }
+.lp-orb, .lp-grid, .lp-hero-glow { display: none; }
+.lp-header { background: rgba(0, 0, 0, 0.8); border-bottom: 1px solid #262626; box-shadow: none; }
+.lp-brand img { width: 32px; height: 32px; border-radius: 6px; }
+.lp-nav a { color: #a1a1aa; }
+.lp-nav a:hover { color: #fafafa; }
+.lp-social-btn { border-radius: 6px; border: 1px solid #262626; background: transparent; }
+.lp-header-actions .btn, .lp-hero-cta .btn { border-radius: 6px; height: 40px; }
+.lp-hero { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px; padding: 72px 24px 48px; min-height: auto; }
+.lp-hero-copy { max-width: 760px; display: flex; flex-direction: column; align-items: center; }
+.lp-hero-headline { font-size: clamp(40px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.05em; }
+.lp-hero-gradient-text { background: none; -webkit-background-clip: initial; background-clip: initial; color: #fafafa; }
+.lp-hero-desc { max-width: 640px; margin: 0 auto 22px; color: #a1a1aa; font-size: 17px; }
+.lp-metric-pill { border-radius: 6px; background: #0a0a0a; border: 1px solid #262626; }
+.lp-metric-dot { background: #fafafa; box-shadow: none; }
+.lp-metric-num { color: #fafafa; }
+.lp-hero-cta { justify-content: center; }
+.lp-hero-btn-main { box-shadow: none; }
+.lp-hero-visual { width: 100%; max-width: 800px; }
+.lp-console-card { border-radius: 8px; background: #0a0a0a; border: 1px solid #262626; box-shadow: none; }
+.lp-console-bar { border-top-left-radius: 8px; border-top-right-radius: 8px; background: #0a0a0a; border-bottom: 1px solid #262626; }
+.lp-console-dots .dot { background: #333333; }
+.lp-duel-card { background: #0a0a0a; border: 1px solid #262626; border-radius: 8px; }
