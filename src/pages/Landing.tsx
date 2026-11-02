@@ -232,7 +232,7 @@ function GatewayControlDeck({ models }: { models: PublicModel[] }) {
               onChange={(e) => setMillions(Number(e.target.value))}
               className="lp-deck-slider"
               style={{
-                background: `linear-gradient(to right, #b388ff 0%, #818cf8 ${millions}%, rgba(255, 255, 255, 0.08) ${millions}%, rgba(255, 255, 255, 0.08) 100%)`,
+                background: `linear-gradient(to right, #fafafa 0%, #e5e5e5 ${millions}%, rgba(255, 255, 255, 0.08) ${millions}%, rgba(255, 255, 255, 0.08) 100%)`,
               }}
             />
             <div className="lp-deck-preset-pills">
