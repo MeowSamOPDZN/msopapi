@@ -57,7 +57,7 @@ export function UserAuth(props: UserAuthProps) {
 
   async function refresh() {
     const data = await userApi.me()
-    setUser(data.user)
+    setUser(data.user ?? null)
   }
 
   useEffect(() => {
@@ -68,10 +68,10 @@ export function UserAuth(props: UserAuthProps) {
           setLoading(false)
           return
         }
-        userApi.me().then((data) => setUser(data.user)).catch(() => setUser(null)).finally(() => setLoading(false))
+        userApi.me().then((data) => setUser(data.user ?? null)).catch(() => setUser(null)).finally(() => setLoading(false))
       })
     }
-    userApi.me().then((data) => setUser(data.user)).catch(() => setUser(null)).finally(() => setLoading(false))
+    userApi.me().then((data) => setUser(data.user ?? null)).catch(() => setUser(null)).finally(() => setLoading(false))
     return undefined
   }, [])
 
