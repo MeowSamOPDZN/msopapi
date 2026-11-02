@@ -5,6 +5,8 @@ APInexGate project by APInex (MIT license, see LICENSE).
 
 Live site: https://msopapi.vercel.app
 
+Vercel git deployment: pushes to main deploy automatically.
+
 ## What this is
 
 One API key for OpenAI-compatible, Anthropic, and Responses models, with
