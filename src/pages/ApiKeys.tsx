@@ -1,6 +1,12 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Navigate, useSearchParams } from 'react-router-dom'
 import { userApi, type CustomerApiKey } from '../auth/userApi'
+import {
+  deleteFirestoreKey,
+  listFirestoreKeys,
+  saveFirestoreKey,
+} from '../auth/firestoreKeys'
+import { isFirebaseConfigured } from '../auth/firebase'
 import { Modal } from '../components/Modal'
 import { useToast } from '../components/Toast'
 
@@ -38,12 +44,23 @@ function KeysPanel() {
   const [createOpen, setCreateOpen] = useState(false)
   const [deleteTarget, setDeleteTarget] = useState<CustomerApiKey | null>(null)
   const [name, setName] = useState('')
+  const [secret, setSecret] = useState('')
+  const [firebaseMode, setFirebaseMode] = useState(false)
   const [busy, setBusy] = useState(false)
   const [copiedKeyId, setCopiedKeyId] = useState<string | null>(null)
 
   const refresh = useCallback(async () => {
-    const data = await userApi.keys()
-    setKeys(data.keys)
+    try {
+      const data = await userApi.keys()
+      setFirebaseMode(false)
+      setKeys(data.keys)
+    } catch {
+      // No gateway backend on Vercel yet: load this account's keys
+      // from Firestore instead, if Firebase is configured.
+      if (!isFirebaseConfigured) throw new Error('Could not load API keys')
+      setFirebaseMode(true)
+      setKeys(await listFirestoreKeys())
+    }
   }, [])
 
   useEffect(() => {
@@ -55,6 +72,20 @@ function KeysPanel() {
   async function createKey() {
     setBusy(true)
     try {
+      if (firebaseMode) {
+        if (!secret.trim()) {
+          toast('Paste the API key secret to save it', 'error')
+          return
+        }
+        const saved = await saveFirestoreKey(name.trim() || 'Untitled key', secret.trim())
+        setKeys((prev) => [saved, ...prev])
+        setCreateOpen(false)
+        setName('')
+        setSecret('')
+        void navigator.clipboard?.writeText(saved.secret || '')
+        toast('API key saved to your account & copied to clipboard!')
+        return
+      }
       const data = await userApi.createKey({
         name: name.trim() || 'Untitled key',
       })
@@ -75,7 +106,11 @@ function KeysPanel() {
     if (!deleteTarget) return
     setBusy(true)
     try {
-      await userApi.revokeKey(deleteTarget.id)
+      if (firebaseMode) {
+        await deleteFirestoreKey(deleteTarget.id)
+      } else {
+        await userApi.revokeKey(deleteTarget.id)
+      }
       setKeys((prev) => prev.filter((key) => key.id !== deleteTarget.id))
       setDeleteTarget(null)
       toast('Key deleted', 'info')
@@ -103,6 +138,11 @@ function KeysPanel() {
 
   return (
     <>
+      {firebaseMode ? (
+        <p className="keys-panel-meta" style={{ marginBottom: 12 }}>
+          Saved in your Firebase account only — no other account can see these keys.
+        </p>
+      ) : null}
       <div className="keys-panel-toolbar">
         <div className="keys-panel-meta">
           <span className="keys-live-dot" aria-hidden="true" />
@@ -235,6 +275,19 @@ function KeysPanel() {
             />
             <span className="field-hint">You will be able to copy the secret immediately after creation.</span>
           </div>
+          {firebaseMode ? (
+            <div className="field">
+              <label htmlFor="key-secret">API key secret</label>
+              <input
+                id="key-secret"
+                className="input key-modal-input"
+                placeholder="Paste the key to save it to your account"
+                value={secret}
+                onChange={(e) => setSecret(e.target.value)}
+              />
+              <span className="field-hint">Stored under your account only. The gateway backend is not running on Vercel, so keys are saved here instead of generated.</span>
+            </div>
+          ) : null}
         </div>
       </Modal>
 
