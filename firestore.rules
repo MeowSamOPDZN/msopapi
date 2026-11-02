@@ -1,0 +1,34 @@
+rules_version = '2';
+
+// MsopAPI API keys, saved in Firebase Firestore, one account only.
+// Paste this file into Firebase Console -> Firestore Database -> Rules -> Publish.
+// Every key lives under the account that saved it, and no account can
+// read, list, create, change or delete another account's keys.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // A signed-in user may only touch their own user document.
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+
+      // A signed-in user may only touch their own API keys.
+      match /apiKeys/{keyId} {
+        // Reading needs only the path match: the key id sits under
+        // this user's own document, so no other account can reach it.
+        allow get, list: if request.auth != null
+          && request.auth.uid == userId;
+        // Creating or changing a key must also stamp it with the
+        // caller's own uid, so a key can never be filed under someone else.
+        allow create, update: if request.auth != null
+          && request.auth.uid == userId
+          && request.resource.data.ownerUid == userId;
+        allow delete: if request.auth != null
+          && request.auth.uid == userId;
+      }
+    }
+
+    // Everything else is closed by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
