@@ -31,13 +31,13 @@
 :root {
   --bg: #000000;
   --bg-elevated: #0a0a0a;
-  --surface: #111111;
-  --surface-hover: #1a1a1a;
+  --surface: #0a0a0a;
+  --surface-hover: #171717;
   --surface-active: #262626;
-  --border: rgba(255, 255, 255, 0.1);
+  --border: #1f1f1f;
   --border-strong: rgba(255, 255, 255, 0.2);
   --text: #fafafa;
-  --text-secondary: #a1a1aa;
+  --text-secondary: #888888;
   --text-muted: #737373;
   --accent: #fafafa;
   --accent-hover: #ffffff;
@@ -79,7 +79,7 @@
   --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.45);
   --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
-  --nav-width: 228px;
+  --nav-width: 240px;
   --header-h: 64px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -139,7 +139,7 @@ label {
 
 body {
   font-family: var(--font);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.5;
   color: var(--text);
   background: var(--bg);
