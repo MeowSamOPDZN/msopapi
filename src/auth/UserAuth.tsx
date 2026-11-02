@@ -2,6 +2,15 @@ import { useEffect, useState, type ReactNode } from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
 import { captureReferralFromUrl, getStoredReferralCode } from './referral'
 import { userApi, type CustomerUser } from './userApi'
+import {
+  firebaseAuthErrorMessage,
+  firebaseSignInEmail,
+  firebaseSignInGoogle,
+  firebaseSignOut,
+  firebaseSignUpEmail,
+  isFirebaseConfigured,
+  onFirebaseUserChange,
+} from './firebase'
 
 import { BrandName } from '../components/BrandName'
 import '../admin/AdminAuth.css'
@@ -41,6 +50,9 @@ export function UserAuth(props: UserAuthProps) {
   const [googleEnabled, setGoogleEnabled] = useState(true)
 
   const [error, setError] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [busy, setBusy] = useState(false)
   const [activeReferralCode, setActiveReferralCode] = useState<string | null>(() => getStoredReferralCode())
 
   async function refresh() {
@@ -49,10 +61,25 @@ export function UserAuth(props: UserAuthProps) {
   }
 
   useEffect(() => {
+    if (isFirebaseConfigured) {
+      return onFirebaseUserChange((fbUser) => {
+        if (fbUser) {
+          setUser(fbUser)
+          setLoading(false)
+          return
+        }
+        userApi.me().then((data) => setUser(data.user)).catch(() => setUser(null)).finally(() => setLoading(false))
+      })
+    }
     userApi.me().then((data) => setUser(data.user)).catch(() => setUser(null)).finally(() => setLoading(false))
+    return undefined
   }, [])
 
   useEffect(() => {
+    if (isFirebaseConfigured) {
+      setGoogleEnabled(true)
+      return
+    }
     userApi.authChallenge().then((data) => setGoogleEnabled(Boolean(data.googleEnabled))).catch(() => setGoogleEnabled(false))
   }, [])
 
@@ -71,11 +98,45 @@ export function UserAuth(props: UserAuthProps) {
 
   async function logout() {
     try {
+      await firebaseSignOut()
+    } catch {
+      // Firebase sign-out is best effort here.
+    }
+    try {
       await userApi.logout()
     } catch {
       // Clear local state even if the network request fails.
     }
     setUser(null)
+  }
+
+  async function handleGoogle() {
+    setError('')
+    setBusy(true)
+    try {
+      const fbUser = await firebaseSignInGoogle()
+      setUser(fbUser)
+    } catch (err) {
+      setError(firebaseAuthErrorMessage(err))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function handleEmail(event: React.FormEvent) {
+    event.preventDefault()
+    setError('')
+    setBusy(true)
+    try {
+      const fbUser = registering
+        ? await firebaseSignUpEmail(email.trim(), password)
+        : await firebaseSignInEmail(email.trim(), password)
+      setUser(fbUser)
+    } catch (err) {
+      setError(firebaseAuthErrorMessage(err))
+    } finally {
+      setBusy(false)
+    }
   }
 
   if (loading) return <div className="admin-loading">Checking session…</div>
@@ -119,7 +180,9 @@ export function UserAuth(props: UserAuthProps) {
           <p className="auth-kicker">{registering ? 'Create account' : 'Sign in'}</p>
           <h1>{registering ? 'Start with Google' : 'Welcome back'}</h1>
           <p className="auth-lead">
-            Same button either way. An existing Google account signs in. A new one creates the account.
+            {isFirebaseConfigured
+              ? 'Sign in with Google or with your email and password. A new email creates the account.'
+              : 'Same button either way. An existing Google account signs in. A new one creates the account.'}
           </p>
 
           {error ? <p className="auth-error" role="alert">{error}</p> : null}
@@ -131,16 +194,54 @@ export function UserAuth(props: UserAuthProps) {
           ) : null}
 
           {googleEnabled ? (
-            <a
-              className="auth-google"
-              href="/api/user/auth/google"
-            >
-              <GoogleIcon />
-              Continue with Google
-            </a>
+            isFirebaseConfigured ? (
+              <button
+                type="button"
+                className="auth-google"
+                onClick={handleGoogle}
+                disabled={busy}
+              >
+                <GoogleIcon />
+                Continue with Google
+              </button>
+            ) : (
+              <a
+                className="auth-google"
+                href="/api/user/auth/google"
+              >
+                <GoogleIcon />
+                Continue with Google
+              </a>
+            )
           ) : (
             <p className="auth-error">Google sign-in is temporarily unavailable.</p>
           )}
+
+          {isFirebaseConfigured ? (
+            <form onSubmit={handleEmail} style={{ marginTop: 16, display: 'grid', gap: 10 }}>
+              <input
+                className="input"
+                type="email"
+                required
+                autoComplete="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                className="input"
+                type="password"
+                required
+                autoComplete={registering ? 'new-password' : 'current-password'}
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <button type="submit" className="btn btn-primary" disabled={busy}>
+                {registering ? 'Create account' : 'Sign in with email'}
+              </button>
+            </form>
+          ) : null}
 
 
           <p className="auth-switch">
