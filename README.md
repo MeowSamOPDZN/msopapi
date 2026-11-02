@@ -36,6 +36,8 @@ npm install
 npm run dev:full
 ```
 
+Free models get 10,000 tokens a day per account (the gateway default). Continuous, unlimited use is a paid subscription, not free.
+
 Set `ADMIN_PASSWORD` in `.env`, then open `/admin`, add your APInex key
 in Admin → Providers, and import models in Admin → Models.
 
