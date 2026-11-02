@@ -300,7 +300,6 @@ export function Layout() {
                       >
                         <item.icon />
                         <span>{item.label}</span>
-                        <span className="sidebar-menu-chevron" aria-hidden>›</span>
                       </NavLink>
                     )}
                   </li>
