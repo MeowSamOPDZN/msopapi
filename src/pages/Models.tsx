@@ -53,12 +53,12 @@ export function Models() {
         // Prefer authed catalog (includes health) when session exists.
         const data = await userApi.models()
         if (cancelled) return
-        setModels(data.models)
+        setModels(data.models ?? [])
       } catch {
         /* guest → public catalog */
         try {
           const res = await fetch('/api/public/models')
-          if (!res.ok) throw new Error('Could not load models')
+          if (!res.ok || (res.headers.get('content-type') || '').includes('text/html')) throw new Error('Could not load models')
           const data = (await res.json()) as {
             models?: Array<{
               id: string
