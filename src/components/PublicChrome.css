@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   background:
-    radial-gradient(900px 420px at 80% -10%, rgba(179, 136, 255, 0.08), transparent 55%),
+    radial-gradient(900px 420px at 80% -10%, rgba(255, 255, 255, 0.08), transparent 55%),
     var(--bg, #1c1f24);
   color: var(--text, #e9ecef);
 }
@@ -102,9 +102,9 @@
   font-weight: 750;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #b388ff;
-  background: rgba(179, 136, 255, 0.12);
-  border: 1px solid rgba(179, 136, 255, 0.28);
+  color: #fafafa;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 .pub-legal h1 {
@@ -142,7 +142,7 @@
   font-size: 12px;
   font-weight: 750;
   letter-spacing: 0.04em;
-  color: #b388ff;
+  color: #fafafa;
   padding-top: 3px;
 }
 
@@ -178,7 +178,7 @@
 }
 
 .pub-legal a {
-  color: #b388ff;
+  color: #fafafa;
   text-decoration: none;
 }
 
@@ -213,3 +213,9 @@
     align-items: flex-start;
   }
 }
+
+/* vercel style for msopapi */
+.pub-chrome { background: #000000; }
+.pub-topbar { background: rgba(0, 0, 0, 0.85); border-bottom: 1px solid #262626; }
+.pub-nav a:not(.btn) { color: #a1a1aa; }
+.pub-nav a:not(.btn):hover { color: #fafafa; }
