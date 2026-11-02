@@ -77,7 +77,8 @@ export function defaultSubscriptionSettings(): SubscriptionSettings {
   }
 }
 
-export const DEFAULT_FREE_DAILY_TOKENS = 10_000_000
+/* free models get 10k tokens a day, paid subscription is the continuous path */
+export const DEFAULT_FREE_DAILY_TOKENS = 10_000
 
 export function utcPeriodKey(date: Date = new Date()) {
   return date.toISOString().slice(0, 10)
