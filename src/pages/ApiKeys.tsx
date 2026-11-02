@@ -45,6 +45,7 @@ function KeysPanel() {
   const [deleteTarget, setDeleteTarget] = useState<CustomerApiKey | null>(null)
   const [name, setName] = useState('')
   const [secret, setSecret] = useState('')
+  const [keyPrefix, setKeyPrefix] = useState('sk-msop-')
   const [firebaseMode, setFirebaseMode] = useState(false)
   const [busy, setBusy] = useState(false)
   const [copiedKeyId, setCopiedKeyId] = useState<string | null>(null)
@@ -69,23 +70,23 @@ function KeysPanel() {
       .finally(() => setLoading(false))
   }, [refresh, toast])
 
-  function generateSecret() {
-    const bytes = new Uint8Array(24)
+  function randomSecret(prefix: string) {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    const bytes = new Uint8Array(48)
     window.crypto.getRandomValues(bytes)
-    const hex = Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('')
-    setSecret(`sk-msop-${hex}`)
+    const random = Array.from(bytes, (b) => chars[b % chars.length]).join('')
+    return `${prefix}${random}`
+  }
+
+  function generateSecret() {
+    setSecret(randomSecret(keyPrefix))
   }
 
   async function createKey() {
     setBusy(true)
     try {
       if (firebaseMode) {
-        const finalSecret = secret.trim() || (() => {
-          const bytes = new Uint8Array(24)
-          window.crypto.getRandomValues(bytes)
-          const hex = Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('')
-          return `sk-msop-${hex}`
-        })()
+        const finalSecret = secret.trim() || randomSecret(keyPrefix)
         const saved = await saveFirestoreKey(name.trim() || 'Untitled key', finalSecret)
         setKeys((prev) => [saved, ...prev])
         setCreateOpen(false)
@@ -284,6 +285,19 @@ function KeysPanel() {
             />
             <span className="field-hint">You will be able to copy the secret immediately after creation.</span>
           </div>
+          {firebaseMode ? (
+            <div className="field">
+              <label htmlFor="key-prefix">Key prefix (change how the key looks)</label>
+              <input
+                id="key-prefix"
+                className="input key-modal-input"
+                placeholder="sk-msop-"
+                value={keyPrefix}
+                onChange={(e) => setKeyPrefix(e.target.value)}
+              />
+              <span className="field-hint">The random part after this is generated fresh every time.</span>
+            </div>
+          ) : null}
           {firebaseMode ? (
             <div className="field">
               <label htmlFor="key-secret">API key secret</label>
