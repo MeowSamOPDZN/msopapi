@@ -8,6 +8,10 @@
       "destination": "/api/v1/$1"
     },
     {
+      "source": "/api/user/(.*)",
+      "destination": "/api/user-handler?path=$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
