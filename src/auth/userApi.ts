@@ -78,7 +78,11 @@ export type AuthSuccess = {
 }
 
 export const userApi = {
-  me: () => request<{ user: CustomerUser; expiresAt: string }>('/api/user/me'),
+  me: async () => {
+    const data = await request<{ user: CustomerUser; expiresAt: string }>('/api/user/me')
+    if (!data.user) throw new Error('Not signed in')
+    return data
+  },
   ackLevel: () => request<{ level: AccountLevel }>('/api/user/level/ack', { method: 'POST' }),
   publicLevels: () => request<{ levels: PublicLevel[]; totalToMaxUsd: number }>('/api/public/levels'),
 
