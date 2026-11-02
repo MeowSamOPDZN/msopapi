@@ -2601,8 +2601,6 @@
 .sidebar-menu-button:hover svg { color: #ededed; }
 .sidebar-menu-button.is-active, .sidebar-menu-button[data-active] { background: #1f1f1f; color: #fafafa; }
 .sidebar-menu-button.is-active svg, .sidebar-menu-button[data-active] svg { color: #fafafa; }
-.sidebar-menu-chevron { flex: 0 0 auto; margin-left: auto; font-size: 16px; line-height: 1; color: #555555; }
-.sidebar-menu-button.is-active .sidebar-menu-chevron { color: #888888; }
 .sidebar-footer { background: #000000; border-top: 1px solid #1f1f1f; }
 .sidebar-status-pill { background: #0a0a0a; border: 1px solid #1f1f1f; border-radius: 8px; color: #888888; font-size: 13px; }
 .topbar { background: #000000; border-bottom: 1px solid #1f1f1f; height: 48px; min-height: 48px; backdrop-filter: none; -webkit-backdrop-filter: none; }
