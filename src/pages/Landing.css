@@ -2720,3 +2720,12 @@
 .lp-console-bar { border-top-left-radius: 8px; border-top-right-radius: 8px; background: #0a0a0a; border-bottom: 1px solid #262626; }
 .lp-console-dots .dot { background: #333333; }
 .lp-duel-card { background: #0a0a0a; border: 1px solid #262626; border-radius: 8px; }
+
+/* vercel style cleanup: no glows left */
+.lp-header-actions .btn-primary, .lp-hero-cta .btn-primary, .lp-hero-btn-main { box-shadow: none; }
+.lp-header-actions .btn-primary:hover, .lp-hero-cta .btn-primary:hover { box-shadow: none; }
+.lp-deck-slider::-webkit-slider-thumb { box-shadow: none; }
+.lp-deck-slider::-moz-range-thumb { box-shadow: none; background: #fafafa; border: 2px solid #fafafa; }
+.lp-duel-card.lp-duel-ours { box-shadow: none; }
+.lp-model-dropdown { box-shadow: 0 24px 64px rgba(0, 0, 0, 0.95); }
+.lp-console-card { box-shadow: none; }
