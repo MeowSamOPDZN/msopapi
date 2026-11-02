@@ -35,7 +35,7 @@
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background:
-    radial-gradient(540px 220px at 0% 0%, rgba(179, 136, 255, 0.12), transparent 70%),
+    radial-gradient(540px 220px at 0% 0%, rgba(255, 255, 255, 0.12), transparent 70%),
     linear-gradient(180deg, #181d26 0%, #12151c 100%);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.05) inset,
@@ -142,7 +142,7 @@
 .mp-id-box code {
   font-family: var(--mono, monospace);
   font-size: 12px;
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .mp-copy {
@@ -159,8 +159,8 @@
 }
 
 .mp-copy:hover {
-  background: rgba(179, 136, 255, 0.18);
-  color: #b388ff;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fafafa;
 }
 
 .mp-body {
@@ -294,7 +294,7 @@
 }
 
 .mp-code-icon {
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .mp-sandbox-controls {
@@ -330,7 +330,7 @@
 
 .mp-lang-tab.is-active {
   background: rgba(255, 255, 255, 0.1);
-  color: #b388ff;
+  color: #fafafa;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -402,8 +402,8 @@
 .mp-terminal-target {
   font-family: var(--mono, monospace);
   font-size: 10.5px;
-  color: #b388ff;
-  background: rgba(179, 136, 255, 0.08);
+  color: #fafafa;
+  background: rgba(255, 255, 255, 0.08);
   padding: 1px 6px;
   border-radius: 4px;
   flex-shrink: 0;
