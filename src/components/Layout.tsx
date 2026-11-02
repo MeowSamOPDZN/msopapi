@@ -51,6 +51,7 @@ export function Layout() {
   const [logoutOpen, setLogoutOpen] = useState(false)
   const [loggingOut, setLoggingOut] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [findQuery, setFindQuery] = useState('')
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [settingsTab, setSettingsTab] = useState<'account' | 'referrals' | 'security' | 'billing'>('account')
   const [rewards, setRewards] = useState<RewardsInfo | null>(null)
@@ -63,6 +64,9 @@ export function Layout() {
       ? [{ to: links.telegramSupport, label: 'Support', end: false, external: true, icon: IconSupport }]
       : []),
   ]
+  const visibleNav = findQuery.trim()
+    ? nav.filter((item) => item.label.toLowerCase().includes(findQuery.trim().toLowerCase()))
+    : nav
   const [referralInput, setReferralInput] = useState('')
   const [referralBusy, setReferralBusy] = useState(false)
   const [referralNotice, setReferralNotice] = useState('')
@@ -243,6 +247,18 @@ export function Layout() {
             </button>
           </div>
 
+          <div className="sidebar-find">
+            <span className="sidebar-find-icon" aria-hidden>⌕</span>
+            <input
+              className="sidebar-find-input"
+              type="text"
+              value={findQuery}
+              onChange={(e) => setFindQuery(e.target.value)}
+              placeholder="Find"
+              aria-label="Find in navigation"
+            />
+            <kbd className="sidebar-find-key">F</kbd>
+          </div>
           <div
             data-slot="sidebar-content"
             data-sidebar="content"
@@ -250,7 +266,7 @@ export function Layout() {
           >
             <nav aria-label="Main navigation">
               <ul data-slot="sidebar-menu" data-sidebar="menu" className="sidebar-menu">
-                {nav.map((item) => (
+                {visibleNav.map((item) => (
                   <li
                     key={item.label}
                     data-slot="sidebar-menu-item"
@@ -284,6 +300,7 @@ export function Layout() {
                       >
                         <item.icon />
                         <span>{item.label}</span>
+                        <span className="sidebar-menu-chevron" aria-hidden>›</span>
                       </NavLink>
                     )}
                   </li>
