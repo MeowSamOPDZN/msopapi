@@ -1,3 +1,5 @@
+import { getIdToken } from 'firebase/auth'
+import { getFirebaseAuth } from './firebase'
 export type PublicLevel = {
   level: number
   topupUsd: number
@@ -50,6 +52,20 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const token = memorySessionToken
   if (token && !headers.has('X-Session-Id')) {
     headers.set('X-Session-Id', token)
+  }
+  // Firebase backend: send the signed-in user's ID token so the
+  // serverless /api/user/* functions can verify the account.
+  if (!headers.has('Authorization')) {
+    try {
+      const auth = getFirebaseAuth()
+      const current = auth?.currentUser
+      if (current) {
+        const idToken = await getIdToken(current)
+        if (idToken) headers.set('Authorization', `Bearer ${idToken}`)
+      }
+    } catch {
+      // No Firebase session, the backend will answer 401 as a guest.
+    }
   }
   const response = await fetch(path, {
     ...init,
