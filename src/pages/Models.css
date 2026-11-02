@@ -107,8 +107,8 @@
 .models-provider-tab.is-active {
   color: #071018 !important;
   border-color: transparent !important;
-  background: linear-gradient(180deg, #dcc4ff 0%, #b388ff 55%, #9a6ef0 100%) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 8px 18px rgba(179, 136, 255, 0.28) !important;
+  background: linear-gradient(180deg, #fafafa 0%, #fafafa 55%, #d4d4d4 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 8px 18px rgba(255, 255, 255, 0.28) !important;
 }
 
 
@@ -208,7 +208,7 @@
   box-sizing: border-box;
 }
 
-.model-row-free .model-cell-icon { background: rgba(179, 136, 255, 0.1); border-color: rgba(179, 136, 255, 0.25); }
+.model-row-free .model-cell-icon { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.25); }
 .model-row-openai .model-cell-icon { background: rgba(96, 165, 250, 0.1); border-color: rgba(96, 165, 250, 0.25); }
 .model-row-anthropic .model-cell-icon { background: rgba(251, 146, 60, 0.1); border-color: rgba(251, 146, 60, 0.25); }
 .model-row-gemini .model-cell-icon { background: rgba(234, 179, 8, 0.1); border-color: rgba(234, 179, 8, 0.25); }
@@ -260,7 +260,7 @@
 
 .model-cell-copy:hover {
   background: rgba(255, 255, 255, 0.08);
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .model-cell-copy.is-copied {
@@ -294,7 +294,7 @@
 
 .model-cell-rate strong {
   font-weight: 750;
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .is-free .model-cell-rate strong {
@@ -381,11 +381,11 @@
   align-items: center;
   padding: 3px 8px;
   border-radius: 6px;
-  background: rgba(179, 136, 255, 0.07);
-  border: 1px solid rgba(179, 136, 255, 0.16);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   font-size: 11.5px;
   font-weight: 700;
-  color: #c9a8ff;
+  color: #e5e5e5;
   white-space: nowrap;
 }
 
@@ -418,9 +418,9 @@
 }
 
 .model-more-btn:hover {
-  background: rgba(179, 136, 255, 0.15);
-  border-color: rgba(179, 136, 255, 0.4);
-  color: #b388ff;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fafafa;
   transform: translateY(-1px);
 }
 
