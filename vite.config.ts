@@ -2,7 +2,7 @@ import { defineConfig, loadEnv, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 
 function brandHtml(env: Record<string, string>): Plugin {
-  const name = env.SITE_NAME || 'Gateway'
+  const name = env.SITE_NAME || 'MsopAPI'
   const site = (env.SITE_URL || 'http://127.0.0.1:5173').replace(/\/+$/, '')
   return {
     name: 'brand-html',
