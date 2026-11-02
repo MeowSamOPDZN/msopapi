@@ -72,9 +72,9 @@
 
 .admin-chart-full > .admin-card {
   background:
-    linear-gradient(180deg, rgba(167, 139, 250, 0.08), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 42%),
     var(--surface);
-  border-color: rgba(167, 139, 250, 0.14);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .admin-stat-card {
@@ -100,22 +100,22 @@
 }
 
 .admin-stat-grid > .admin-stat-card:nth-child(1) {
-  background: linear-gradient(160deg, rgba(179, 136, 255, 0.14), transparent 58%), var(--surface);
-  border-color: rgba(179, 136, 255, 0.18);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), transparent 58%), var(--surface);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 .admin-stat-grid > .admin-stat-card:nth-child(1)::after {
-  background: radial-gradient(circle, rgba(179, 136, 255, 0.28), transparent 68%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), transparent 68%);
 }
 .admin-stat-grid > .admin-stat-card:nth-child(1) strong {
-  color: #c9a8ff;
+  color: #e5e5e5;
 }
 
 .admin-stat-grid > .admin-stat-card:nth-child(2) {
-  background: linear-gradient(160deg, rgba(167, 139, 250, 0.14), transparent 58%), var(--surface);
-  border-color: rgba(167, 139, 250, 0.18);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), transparent 58%), var(--surface);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 .admin-stat-grid > .admin-stat-card:nth-child(2)::after {
-  background: radial-gradient(circle, rgba(167, 139, 250, 0.28), transparent 68%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), transparent 68%);
 }
 .admin-stat-grid > .admin-stat-card:nth-child(2) strong {
   color: #a9cdf8;
@@ -169,10 +169,10 @@
 
 .admin-stat-card.accent {
   background:
-    radial-gradient(420px 220px at 10% 0%, rgba(179, 136, 255, 0.18), transparent 60%),
-    radial-gradient(320px 180px at 90% 10%, rgba(167, 139, 250, 0.14), transparent 58%),
-    linear-gradient(160deg, rgba(179, 136, 255, 0.1), var(--surface) 70%);
-  border-color: rgba(179, 136, 255, 0.22);
+    radial-gradient(420px 220px at 10% 0%, rgba(255, 255, 255, 0.18), transparent 60%),
+    radial-gradient(320px 180px at 90% 10%, rgba(255, 255, 255, 0.14), transparent 58%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.1), var(--surface) 70%);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .admin-stat-list {
@@ -202,7 +202,7 @@
 }
 
 .admin-stat-card.accent strong {
-  color: #c9a8ff;
+  color: #e5e5e5;
 }
 
 .provider-balance {
@@ -239,9 +239,9 @@
 
 .admin-two-col > .admin-card:first-child {
   background:
-    linear-gradient(180deg, rgba(167, 139, 250, 0.08), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 42%),
     var(--surface);
-  border-color: rgba(167, 139, 250, 0.14);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .admin-two-col > .admin-card:last-child {
@@ -351,7 +351,7 @@
   border-radius: 10px;
   background: var(--accent-soft);
   color: var(--accent-hover);
-  border: 1px solid rgba(179, 136, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .admin-toolbar {
@@ -389,9 +389,9 @@
 }
 
 .admin-tabs button.is-active {
-  background: linear-gradient(135deg, rgba(179, 136, 255, 0.18), rgba(167, 139, 250, 0.1));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.1));
   color: var(--accent-hover);
-  box-shadow: 0 0 0 1px rgba(179, 136, 255, 0.18);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
 }
 
 .admin-subs-page {
@@ -507,9 +507,9 @@
 
 .admin-table-wrap {
   overflow: auto;
-  border-color: rgba(167, 139, 250, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
   background:
-    linear-gradient(180deg, rgba(167, 139, 250, 0.05), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 24%),
     var(--surface);
 }
 
@@ -765,7 +765,7 @@
   border-radius: 10px;
   background: var(--accent-soft);
   color: var(--accent-hover);
-  border: 1px solid rgba(179, 136, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   overflow: hidden;
   padding: 0;
 }
@@ -778,12 +778,12 @@
 
 .provider-logo.provider-free {
   background: #06121a;
-  border-color: rgba(179, 136, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 .provider-logo.provider-openai {
   background: #0b0b0b;
-  border-color: rgba(167, 139, 250, 0.22);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .provider-logo.provider-anthropic {
@@ -803,12 +803,12 @@
 
 .provider-logo.provider-deepseek {
   background: #041018;
-  border-color: rgba(179, 136, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .provider-logo.provider-zhipu {
   background: #0c0818;
-  border-color: rgba(167, 139, 250, 0.22);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .provider-logo.provider-xai,
@@ -1376,13 +1376,13 @@
   max-width: 148px;
   padding: 8px 10px;
   border-radius: 10px;
-  border: 1px solid rgba(167, 139, 250, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(0, 0, 0, 0.22);
 }
 
 .admin-ip-frame:hover {
-  border-color: rgba(179, 136, 255, 0.35);
-  background: rgba(179, 136, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .admin-ip-fallback {
@@ -1556,7 +1556,7 @@
 .admin-extra-rate-col {
   font-variant-numeric: tabular-nums;
   font-size: 15px;
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .admin-extra-preview {
@@ -1581,8 +1581,8 @@
   gap: 6px;
   padding: 16px 18px;
   border-radius: 14px;
-  border: 1px solid rgba(179, 136, 255, 0.22);
-  background: rgba(179, 136, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .admin-extra-preview-grid span,
@@ -1909,8 +1909,8 @@
 
 .soft-chart-period-bar button:hover,
 .soft-chart-period-bar button.is-active {
-  background: rgba(179, 136, 255, 0.14);
-  color: #c9a8ff;
+  background: rgba(255, 255, 255, 0.14);
+  color: #e5e5e5;
 }
 
 .soft-chart-custom-range {
@@ -1950,7 +1950,7 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 18px;
   background:
-    radial-gradient(circle at 100% 0%, rgba(179, 136, 255, 0.05), transparent 40%),
+    radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.05), transparent 40%),
     linear-gradient(160deg, rgba(28, 32, 38, 0.98), rgba(16, 18, 22, 0.98));
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 }
@@ -2021,7 +2021,7 @@
 }
 
 .soft-chart-seg.is-up {
-  filter: drop-shadow(0 0 6px rgba(179, 136, 255, 0.22));
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.22));
 }
 
 .soft-chart-seg.is-down {
@@ -2206,7 +2206,7 @@
 }
 
 .model-usage-card--paid {
-  border-left-color: #b388ff;
+  border-left-color: #fafafa;
 }
 
 .model-usage-card--tool {
@@ -2284,7 +2284,7 @@
 }
 
 .model-usage-legend .is-paid {
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .model-usage-legend .is-tool {
@@ -2336,7 +2336,7 @@
 }
 
 .model-usage-bar-seg.is-paid {
-  background: #b388ff;
+  background: #fafafa;
 }
 
 .model-usage-bar-seg.is-tool {
@@ -2401,8 +2401,8 @@
 }
 
 .model-usage-kind--paid {
-  background: rgba(179, 136, 255, 0.16);
-  color: #c9a8ff;
+  background: rgba(255, 255, 255, 0.16);
+  color: #e5e5e5;
 }
 
 .model-usage-kind--tool {
