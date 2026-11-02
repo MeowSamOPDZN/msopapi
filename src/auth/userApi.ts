@@ -57,6 +57,11 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     credentials: 'include',
     headers,
   })
+  // On Vercel the SPA rewrite answers missing backend routes with the
+  // homepage HTML and a 200. That is not a backend answer, so treat it
+  // as unavailable instead of letting callers crash on empty data.
+  const contentType = response.headers.get('content-type') || ''
+  if (contentType.includes('text/html')) throw new Error('Backend unavailable')
   const data = (await response.json().catch(() => ({}))) as T & {
     error?: string
   }
