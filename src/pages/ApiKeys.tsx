@@ -69,15 +69,24 @@ function KeysPanel() {
       .finally(() => setLoading(false))
   }, [refresh, toast])
 
+  function generateSecret() {
+    const bytes = new Uint8Array(24)
+    window.crypto.getRandomValues(bytes)
+    const hex = Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('')
+    setSecret(`sk-msop-${hex}`)
+  }
+
   async function createKey() {
     setBusy(true)
     try {
       if (firebaseMode) {
-        if (!secret.trim()) {
-          toast('Paste the API key secret to save it', 'error')
-          return
-        }
-        const saved = await saveFirestoreKey(name.trim() || 'Untitled key', secret.trim())
+        const finalSecret = secret.trim() || (() => {
+          const bytes = new Uint8Array(24)
+          window.crypto.getRandomValues(bytes)
+          const hex = Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('')
+          return `sk-msop-${hex}`
+        })()
+        const saved = await saveFirestoreKey(name.trim() || 'Untitled key', finalSecret)
         setKeys((prev) => [saved, ...prev])
         setCreateOpen(false)
         setName('')
@@ -281,11 +290,14 @@ function KeysPanel() {
               <input
                 id="key-secret"
                 className="input key-modal-input"
-                placeholder="Paste the key to save it to your account"
+                placeholder="Leave blank to generate a new secret, or paste an existing key"
                 value={secret}
                 onChange={(e) => setSecret(e.target.value)}
               />
-              <span className="field-hint">Stored under your account only. The gateway backend is not running on Vercel, so keys are saved here instead of generated.</span>
+              <button type="button" className="btn btn-secondary btn-sm" onClick={generateSecret}>
+                Generate secret
+              </button>
+              <span className="field-hint">Stored under your account only. Leave it blank and a new secret will be generated for you.</span>
             </div>
           ) : null}
         </div>
