@@ -272,7 +272,7 @@ function GatewayControlDeck({ models }: { models: PublicModel[] }) {
 
           <div className="lp-duel-card lp-duel-ours">
             <div className="lp-duel-header">
-              <span className="lp-duel-tag is-ours"><BrandName /> Gateway</span>
+              <span className="lp-duel-tag is-ours"><BrandName /></span>
               {savingsMult ? (
                 <span className="lp-savings-badge">
                   {savingsMult}× cheaper
