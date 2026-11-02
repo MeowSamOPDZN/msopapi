@@ -2609,3 +2609,6 @@
 .topbar-balance { border: 1px solid #1f1f1f; background: #0a0a0a; border-radius: 6px; color: #ededed; }
 .main-wrap { background: #000000; }
 .content { background: #000000; padding: 24px; }
+
+/* node logo is white on transparent, so its tile must be dark */
+.sidebar-brand-tile { background: #000000; border: 1px solid #1f1f1f; }
