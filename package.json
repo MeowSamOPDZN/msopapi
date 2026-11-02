@@ -9,7 +9,6 @@
     "dev:full": "concurrently -k \"npm:dev:server\" \"npm:dev\"",
     "tunnel": "ngrok http 8787",
     "seed": "tsx server/seed.ts",
-
     "build": "tsc -b && tsc -p tsconfig.server.build.json && vite build",
     "start": "node dist-server/index.js",
     "lint": "oxlint",
@@ -24,6 +23,7 @@
     "better-sqlite3": "^13.0.2",
     "dotenv": "^17.4.2",
     "fastify": "^5.11.0",
+    "firebase": "^13.2.0",
     "motion": "^12.43.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
