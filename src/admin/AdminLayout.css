@@ -37,8 +37,8 @@
   padding: 22px 14px 16px;
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(179, 136, 255, 0.06), transparent 28%),
-    linear-gradient(210deg, rgba(167, 139, 250, 0.05), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 28%),
+    linear-gradient(210deg, rgba(255, 255, 255, 0.05), transparent 42%),
     rgba(28, 31, 36, 0.86);
   border-right: 1px solid var(--border);
   backdrop-filter: blur(16px);
@@ -126,7 +126,7 @@
 }
 
 .admin-nav-item.is-active {
-  background: linear-gradient(90deg, rgba(179, 136, 255, 0.16), rgba(167, 139, 250, 0.07));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.07));
   color: var(--accent-hover);
   box-shadow: inset 3px 0 0 var(--accent);
 }
@@ -151,7 +151,7 @@
   gap: 16px;
   padding: 0 30px;
   background:
-    linear-gradient(90deg, rgba(179, 136, 255, 0.04), rgba(167, 139, 250, 0.04)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)),
     rgba(20, 23, 28, 0.92);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(16px);
