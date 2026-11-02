@@ -10,12 +10,12 @@ export type PublicBrand = {
 }
 
 const FALLBACK: PublicBrand = {
-  name: 'Gateway',
-  slug: 'gateway',
+  name: 'MsopAPI',
+  slug: 'msopapi',
   siteUrl: typeof window !== 'undefined' ? window.location.origin : 'http://127.0.0.1:5173',
-  apiBaseUrl: 'http://127.0.0.1:8787/v1',
-  apiOrigin: 'http://127.0.0.1:8787',
-  contactEmail: 'info@localhost',
+  apiBaseUrl: typeof window !== 'undefined' ? `${window.location.origin}/v1` : 'https://msopapi.vercel.app/v1',
+  apiOrigin: typeof window !== 'undefined' ? window.location.origin : 'https://msopapi.vercel.app',
+  contactEmail: 'info@msopapi.vercel.app',
 }
 
 let current: PublicBrand = FALLBACK
