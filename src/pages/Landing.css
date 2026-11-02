@@ -2729,3 +2729,13 @@
 .lp-duel-card.lp-duel-ours { box-shadow: none; }
 .lp-model-dropdown { box-shadow: 0 24px 64px rgba(0, 0, 0, 0.95); }
 .lp-console-card { box-shadow: none; }
+
+/* dashboard tokens on the public landing too */
+.lp-header { height: 48px; border-bottom: 1px solid #1f1f1f; }
+.lp-header-inner { padding: 8px 24px; }
+.lp-brand { font-size: 14px; }
+.lp-nav a { font-size: 13px; color: #888888; }
+.lp-nav a:hover { color: #ededed; }
+.lp-header-actions .btn, .lp-hero-cta .btn { height: 32px; }
+.lp-console-card { border-color: #1f1f1f; }
+.lp-duel-card { border-color: #1f1f1f; }
