@@ -6,7 +6,7 @@
   margin-bottom: 14px;
   padding: 12px 14px;
   border-radius: var(--radius);
-  border: 1px solid rgba(167, 139, 250, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   background: rgba(59, 130, 246, 0.12);
   color: var(--text-secondary);
 }
@@ -17,7 +17,7 @@
 }
 
 .billing-banner strong {
-  color: #c9a8ff;
+  color: #e5e5e5;
 }
 
 .billing-page {
@@ -38,11 +38,11 @@
   padding: 28px 30px;
   border-radius: 20px;
   background:
-    radial-gradient(540px 240px at 0% 0%, rgba(179, 136, 255, 0.16), transparent 60%),
-    radial-gradient(420px 200px at 100% 0%, rgba(99, 102, 241, 0.12), transparent 60%),
+    radial-gradient(540px 240px at 0% 0%, rgba(255, 255, 255, 0.16), transparent 60%),
+    radial-gradient(420px 200px at 100% 0%, rgba(255, 255, 255, 0.12), transparent 60%),
     linear-gradient(150deg, rgba(20, 26, 38, 0.95), rgba(12, 16, 24, 0.98));
-  border: 1px solid rgba(179, 136, 255, 0.22);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 35px rgba(179, 136, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 35px rgba(255, 255, 255, 0.06);
 }
 
 /* Wallet bar */
@@ -72,7 +72,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #b388ff;
+  color: #fafafa;
 }
 
 .live-pulse-dot {
@@ -93,7 +93,7 @@
   font-weight: 850;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  background: linear-gradient(120deg, #b388ff, #86efac);
+  background: linear-gradient(120deg, #fafafa, #86efac);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -126,8 +126,8 @@
   margin-top: 14px;
   padding: 14px 16px;
   border-radius: 14px;
-  background: rgba(179, 136, 255, 0.1);
-  border: 1px solid rgba(179, 136, 255, 0.28);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   font-size: 13px;
   color: #d7eefe;
 }
@@ -159,8 +159,8 @@
   gap: 14px;
   padding: 16px 18px;
   border-radius: 14px;
-  background: rgba(179, 136, 255, 0.07);
-  border: 1px solid rgba(179, 136, 255, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
 }
 
@@ -169,16 +169,16 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #b388ff;
-  box-shadow: 0 0 10px #b388ff;
+  background: #fafafa;
+  box-shadow: 0 0 10px #fafafa;
 }
 
 .billing-banner-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #a78bfa;
-  box-shadow: 0 0 8px #a78bfa;
+  background: #d4d4d4;
+  box-shadow: 0 0 8px #d4d4d4;
 }
 
 .billing-history-card .billing-payments {
@@ -226,9 +226,9 @@
 }
 
 .budget-level.is-done {
-  color: #c9a8ff;
-  border-color: rgba(179, 136, 255, 0.32);
-  background: rgba(179, 136, 255, 0.12);
+  color: #e5e5e5;
+  border-color: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .billing-history-card .pay-row {
@@ -272,7 +272,7 @@
 
 .billing-history-card .pay-row.is-pending .pay-status,
 .billing-history-card .pay-row.is-confirming .pay-status {
-  color: #c9a8ff;
+  color: #e5e5e5;
 }
 
 .billing-history-card .pay-row.is-failed .pay-status,
@@ -330,8 +330,8 @@
 .amount-chip.is-active {
   border: 0;
   color: #071018;
-  background: linear-gradient(180deg, #dcc4ff 0%, #b388ff 55%, #9a6ef0 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 8px 18px rgba(179, 136, 255, 0.28);
+  background: linear-gradient(180deg, #fafafa 0%, #fafafa 55%, #d4d4d4 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 8px 18px rgba(255, 255, 255, 0.28);
 }
 
 .section-block-header {
@@ -360,8 +360,8 @@
 }
 
 .amount-input-group:focus-within {
-  border-color: rgba(179, 136, 255, 0.55);
-  box-shadow: 0 0 0 3px rgba(179, 136, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
   background: rgba(0, 0, 0, 0.38);
 }
 
@@ -446,8 +446,8 @@
 }
 
 .method-card.is-active {
-  background: linear-gradient(180deg, rgba(143, 212, 255, 0.18), rgba(47, 159, 230, 0.1));
-  border-color: rgba(143, 212, 255, 0.55);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(47, 159, 230, 0.1));
+  border-color: rgba(255, 255, 255, 0.55);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
@@ -457,8 +457,8 @@
   border-radius: 10px;
   display: grid;
   place-items: center;
-  background: linear-gradient(145deg, rgba(167, 139, 250, 0.16), rgba(179, 136, 255, 0.1));
-  border: 1px solid rgba(167, 139, 250, 0.18);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 16px;
   color: #a9cdf8;
 }
