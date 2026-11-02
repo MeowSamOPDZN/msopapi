@@ -15,7 +15,7 @@
   gap: 2px;
   padding: 10px 14px;
   border-radius: 14px;
-  border: 1px solid rgba(179, 136, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   background: rgba(14, 22, 34, 0.8);
 }
 
@@ -23,7 +23,7 @@
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #c9a8ff;
+  color: #e5e5e5;
 }
 
 .rpm-current strong {
@@ -39,7 +39,7 @@
 .rpm-card-until {
   margin: -4px 0 12px;
   font-size: 13px;
-  color: #c9a8ff;
+  color: #e5e5e5;
 }
 
 .rpm-grid {
@@ -57,19 +57,19 @@
   border-radius: 18px;
   border: 1px solid rgba(148, 163, 184, 0.16);
   background:
-    radial-gradient(280px 120px at 0% 0%, rgba(179, 136, 255, 0.12), transparent 60%),
+    radial-gradient(280px 120px at 0% 0%, rgba(255, 255, 255, 0.12), transparent 60%),
     linear-gradient(165deg, rgba(18, 24, 36, 0.96), rgba(11, 15, 22, 0.98));
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
 }
 
 .rpm-card.is-active {
-  border-color: rgba(179, 136, 255, 0.55);
-  box-shadow: 0 0 0 1px rgba(179, 136, 255, 0.25), 0 16px 36px rgba(0, 0, 0, 0.32);
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25), 0 16px 36px rgba(0, 0, 0, 0.32);
 }
 
 .rpm-card.is-custom {
   background:
-    radial-gradient(280px 120px at 100% 0%, rgba(167, 139, 250, 0.16), transparent 62%),
+    radial-gradient(280px 120px at 100% 0%, rgba(255, 255, 255, 0.16), transparent 62%),
     linear-gradient(165deg, rgba(18, 24, 36, 0.96), rgba(11, 15, 22, 0.98));
 }
 
@@ -85,7 +85,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #c9a8ff;
+  color: #e5e5e5;
 }
 
 .rpm-pill {
@@ -152,9 +152,9 @@
   border-radius: 20px;
   border: 1px solid rgba(148, 163, 184, 0.18);
   background:
-    radial-gradient(320px 160px at 50% 0%, rgba(179, 136, 255, 0.14), transparent 70%),
+    radial-gradient(320px 160px at 50% 0%, rgba(255, 255, 255, 0.14), transparent 70%),
     linear-gradient(165deg, rgba(18, 24, 36, 0.98), rgba(10, 14, 22, 0.99));
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(179, 136, 255, 0.1);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
   padding: 24px 22px;
   display: flex;
   flex-direction: column;
@@ -219,8 +219,8 @@
 }
 
 .rpm-method-btn:hover:not(:disabled) {
-  border-color: rgba(179, 136, 255, 0.4);
-  background: rgba(179, 136, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .rpm-method-btn:disabled {
@@ -229,9 +229,9 @@
 }
 
 .rpm-method-btn.is-active {
-  border-color: #b388ff;
-  background: rgba(179, 136, 255, 0.12);
-  box-shadow: 0 0 0 1px #b388ff, 0 8px 20px rgba(179, 136, 255, 0.15);
+  border-color: #fafafa;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 1px #fafafa, 0 8px 20px rgba(255, 255, 255, 0.15);
   color: #f8fafc;
 }
 
@@ -254,7 +254,7 @@
 .rpm-method-price {
   font-size: 17px;
   font-weight: 700;
-  color: #b388ff;
+  color: #fafafa;
   letter-spacing: -0.02em;
 }
 
